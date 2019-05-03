@@ -1,0 +1,557 @@
+/*Import*/
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300');
+/*--------------------------------------------------------------*/
+
+/*General*/
+body{
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #F5F8FA;
+}
+h2{
+	font-family: 'Roboto Condensed', sans-serif;	
+}
+/*--------------------------------------------------------------*/
+
+/*Social Media*/
+div.social{
+	height: 680px;
+	width: 730px; 
+}
+
+div.social iframe.facebook{
+	border: 1px solid black; 
+	left: 18px; 
+	overflow:hidden; 
+	position: relative;
+}
+
+div.social div.twitter{
+	border: 1px solid black; 
+	height: 565px; 
+	left: 370px;
+	overflow: auto; 
+	position: relative; 
+	top: -570px; 
+	width: 340px; 
+}
+/*--------------------------------------------------------------*/
+
+/*Titles*/
+h1{
+	color: #000;
+	font-family: 'Roboto Condensed', sans-serif;
+	text-align: center;
+}
+h1 {
+  	position: relative;
+  	z-index: 1;
+}
+h1:before {
+  	border-top: 2px solid #022555;
+  	content: "";
+  	margin: 0 auto;
+  	position: absolute;
+  	top: 50%;
+  	left: 0;
+  	right: 0;
+  	bottom: 0;
+  	width: 95%;
+  	z-index: -1;
+}
+h1 span {
+  	background: #F5F8FA;
+  	padding: 0 15px;
+}
+/*--------------------------------------------------------------*/
+
+/*Navbar*/
+nav{
+	box-sizing: border-box;
+	height: 100px;
+	left: 0;
+	padding: 10px 10px;
+	position: fixed;
+	top: 0;
+	transition: .5s;
+	width: 100%;
+	z-index: 5;
+}
+nav.black{
+	background-color: rgba(0, 0, 0, .8);
+	height: 80px;
+	padding: 10px 50px;
+}
+nav .logo{
+	float: left;
+}
+nav .logo img{
+	transition: .5s;
+}
+nav.black .logo img{
+	height: 60px;
+	width: 200px;
+}
+nav ul{
+	display: flex;
+	float: right;
+	margin: 0;
+	padding: 0;
+}
+nav ul li{
+	list-style: none;
+}
+nav ul li a{
+	color: #262626;
+	font-family: 'Roboto', sans-serif;
+	line-height: 80px;
+	padding: 5px 20px;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: .5s;
+}
+nav.black ul li a{
+	color: #fff;
+	line-height: 60px;
+}
+nav ul li a:hover,
+nav ul li a.active{
+	color: #fff;
+	background-color: #022555;
+	text-decoration: none;
+}
+/*-------------------*/
+
+/*Carrousel 1*/
+ul.carrousel{
+	background: #ccc;
+	height: 85vh;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	z-index: 0;
+}
+ul.carrousel li{
+	box-sizing: border-box;
+	float: left;
+	height: 100%;
+	list-style: none;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	transition: .5s;
+	width: 33.3333%;
+}
+ul.carrousel li:nth-child(1){
+	background-size: cover;
+	background-position: left;
+}
+ul.carrousel:hover li{
+	width: 20%;
+}
+ul.carrousel li:hover{
+	width: 60%;
+}
+ul.carrousel li .content{
+	position: absolute;
+	bottom: -100%;
+	left: 0;
+	width: 100%;
+	background: rgba(0, 0, 0, .8);
+	box-sizing: border-box;
+	color: #fff;
+	opacity: 0;
+}
+ul.carrousel li:hover .content{
+	bottom: 0;
+	transition: 0.5s;
+	transition-delay: 0.5s;
+	opacity: 1;
+}
+/*-------------------*/
+
+/*Hover Right to Left*/
+a.right{
+	color: #262626;
+	font-size: 20px;
+	left: 15px;
+	letter-spacing: 10px;
+	padding: 20px;
+	position: relative;
+	text-decoration: none;
+}
+a.right:hover{
+	color: #fff;
+	transition-delay: 1s;
+}
+a.right:before{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 2px;
+	background: #262626;
+	transform-style: linear;
+	transition-property: height, width;
+	transition-delay: 0.5s, 1s;
+	transition-duration: 0.5s;
+}
+a.right:hover:before{
+	transition-delay: 0s, 0.5s;
+	transition-property: width, height;
+	width: 2px;
+	height: 100%;
+}
+a.right:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background: #022555;
+	transform: scaleX(0);
+	transition: 0.5s;
+	transition-delay: 0s;
+	transform-origin: right;
+	z-index: -1;
+}
+a.right:hover:after{
+	transform: scaleX(1);
+	transition-delay: 1s;
+}
+/*------------------------------------*/
+
+/*Hover Snake Border General*/
+ul.buttons2{
+	display: flex;
+}
+ul.buttons2 li{
+	list-style: none;
+}
+ul.buttons2 li a{
+	color: #fff;
+	display: block;
+	font-size: 20px;
+	height: 50px;
+	line-height: 50px;
+	margin: 0 15px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	transition: .5s;
+	width: 50px;
+}
+ul.buttons2 li a.btn-primary:hover{
+	color: #337ab7;
+}
+ul.buttons2 li a.btn-success:hover{
+	color: #5cb85c;
+}
+ul.buttons2 li a.btn-delete:hover{
+	color: #d9534f;
+}
+ul.buttons2 li a span{
+	position: absolute;
+	transition: transform .5s;
+}
+ul.buttons2 li a span:nth-child(1),
+ul.buttons2 li a span:nth-child(3){
+	background: #fff;
+	height: 1px;
+	width: 100%;
+}
+ul.buttons2 li a span:nth-child(1){
+	top: 0;
+	left: 0;
+	transform-origin: right;
+}
+ul.buttons2 li a:hover span:nth-child(1){
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform .5s;
+}
+ul.buttons2 li a span:nth-child(3){
+	bottom: 0;
+	left: 0;
+	transform-origin: left;
+}
+ul.buttons2 li a:hover span:nth-child(3){
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform .5s;
+}
+ul.buttons2 li a span:nth-child(2),
+ul.buttons2 li a span:nth-child(4){
+	background: #fff;
+	height: 100%;
+	width: 1px;
+}
+ul.buttons2 li a span:nth-child(2){
+	top: 0;
+	left: 0;
+	transform: scaleY(0);
+	transform-origin: bottom;
+}
+ul.buttons2 li a:hover span:nth-child(2){
+	transform: scaleY(1);
+	transform-origin: top;
+	transition: transform .5s;
+}
+ul.buttons2 li a span:nth-child(4){
+	top: 0;
+	right: 0;
+	transform: scaleY(0);
+	transform-origin: top;
+}
+ul.buttons2 li a:hover span:nth-child(4){
+	transform: scaleY(1);
+	transform-origin: bottom;
+	transition: transform .5s;
+}
+/*------------------------------------*/
+
+/*Hover Snake Border Footer*/
+ul.buttons{
+	display: flex; 
+	margin: 0;
+	padding: 0;
+	position: absolute;
+}
+ul.buttons li{
+	list-style: none;
+}
+ul.buttons li a{
+	color: #fff;
+	display: block;
+	font-size: 20px;
+	height: 50px;
+	line-height: 50px;
+	margin: 0 10px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	transition: .5s;
+	width: 50px;
+}
+ul.buttons li a span{
+	position: absolute;
+	transition: transform .5s;
+}
+ul.buttons li a span:nth-child(1),
+ul.buttons li a span:nth-child(3){
+	background: #fff;
+	height: 1px;
+	width: 100%;
+}
+ul.buttons li a span:nth-child(1){
+	top: 0;
+	left: 0;
+	transform-origin: right;
+}
+ul.buttons li a:hover span:nth-child(1){
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform .5s;
+}
+ul.buttons li a span:nth-child(3){
+	bottom: 0;
+	left: 0;
+	transform-origin: left;
+}
+ul.buttons li a:hover span:nth-child(3){
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform .5s;
+}
+ul.buttons li a span:nth-child(2),
+ul.buttons li a span:nth-child(4){
+	background: #fff;
+	height: 100%;
+	width: 1px;
+}
+ul.buttons li a span:nth-child(2){
+	top: 0;
+	left: 0;
+	transform: scaleY(0);
+	transform-origin: bottom;
+}
+ul.buttons li a:hover span:nth-child(2){
+	transform: scaleY(1);
+	transform-origin: top;
+	transition: transform .5s;
+}
+ul.buttons li a span:nth-child(4){
+	top: 0;
+	right: 0;
+	transform: scaleY(0);
+	transform-origin: top;
+}
+ul.buttons li a:hover span:nth-child(4){
+	transform: scaleY(1);
+	transform-origin: bottom;
+	transition: transform .5s;
+}
+/*------------------------------------*/
+
+/*btn blue*/
+.btn-blue{
+	background-color: #022555;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 20px;
+	padding: 10px;
+	text-decoration: none;
+	transition: all 0.5;
+}
+.btn-blue:hover{
+	background-color: #011444;
+	color: #fff;
+}
+/*------------------------------------*/
+
+/*Tidings*/
+.testimonials{
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	margin: 50px auto;
+}
+.testimonials .card{
+	background: #949494;
+	border-radius: 0;
+	box-shadow: 0 10px 40px rgba(0,0,0,.5);
+	box-sizing: border-box;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 20px;
+	position: relative;
+	text-align: center;
+	width: 350px;
+}
+.testimonials .card .layer{
+	background: linear-gradient(#022555, transparent);
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: calc(100% - 2px);
+	transition: 0.5s;
+	width: 100%;
+	z-index: 1;
+}
+.testimonials .card:hover .layer{
+	top: 0;
+}
+.testimonials .card .content{
+	position: relative;
+	z-index: 2;
+}
+.testimonials .card .content p{
+	color: #fff;
+	font-size: 18px;
+	line-height: 24px;
+	text-align: justify;
+}
+.testimonials .card .content img{
+	border-radius: 50%;
+	border: 4px solid #fff;
+	box-shadow: 0 10px 20px rgba(0,0,0,.2);
+	height: 200px;
+	margin: 0 auto;
+	overflow: hidden;
+	width: 200px;
+}
+.testimonials .card .content .details h2{
+	color: #022555;
+}
+.testimonials .card:hover .content .details h2 {
+	color: #fff;
+}
+/*------------------------------------*/
+
+/*Create views*/
+form.intern{
+	background-color: white;
+	border-radius: 3px;
+	color: #999;
+	font-size: 0.8em;
+	padding: 20px;
+	margin: 0 auto;
+	width: 40%;
+	box-shadow: 0 5px 20px rgba(0,0,0,.5);
+}
+label{
+	font-size: 18px;
+}
+input, textarea{
+	border: 0;
+	outline: none;
+	width: 95%;
+}
+.field{
+	border: solid 1px #ccc;
+	padding: 10px;
+}
+.field:focus{
+	border-color: #022555;
+}
+.center-content{
+	text-align: center;
+}
+button.send, button.img{
+	background-color: transparent;
+	border: 1.5px solid #022555;
+	color: #022555;
+	cursor: pointer;
+	height: 50px;
+	outline: none;
+	transition: all 0.5s;
+	width: 100%;
+}
+button.send:hover, button.img:hover{
+	color: #fff;
+	background-color: #022555;
+}
+/*------------------------------------*/
+
+/*Pagination*/
+ul.pagination{
+	text-align: center;
+	
+}
+ul.pagination li{
+	list-style: none;
+	display: inline-block;
+}
+ul.pagination li span,
+ul.pagination li a{
+	position: relative;
+	display: block;
+	width: 40px;
+	height: 40px;
+	font-size: 20px;
+	text-align: center;
+	line-height: 40px;
+	background: #353535;
+	color: #565656;
+	text-decoration: none;
+	margin: 5px;
+	border-radius: 4px;
+	box-shadow: inset 0 5px 10px rgba(0, 0, 0, .1), 0 2px 5px rgba(0, 0, 0, .5);
+}
+ul.pagination li.active span,
+ul.pagination li a:hover{
+	color: #fff;
+	text-shadow: 0 0 20px rgb(255, 224, 27),
+	 			 0 0 20px rgb(255, 224, 27),
+				 0 0 20px rgb(255, 224, 27),
+				 0 0 20px rgb(255, 224, 27),
+				 0 0 20px rgb(255, 224, 27),
+				 0 0 20px rgb(255, 224, 27),
+				 0 0 20px rgb(255, 224, 27), 
+				 0 0 20px rgb(255, 224, 27);
+}
